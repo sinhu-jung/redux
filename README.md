@@ -1,7 +1,9 @@
 # Redux 직접 만들어보기
-- js를 사용해서 redux를 직접 만들어 보기로 했다.
+
+- js를 사용해서 redux를 직접 만들어 보기
 
 ### 실행
+
 ```
 $ yarn
     or
@@ -14,6 +16,7 @@ $ npm run dev
 ```
 
 ### 폴더 구조
+
 ```
 /redux
     | --- node_modules
@@ -30,6 +33,7 @@ $ npm run dev
 ```
 
 ### Scripts
+
 ```
 {
   "name": "redux",

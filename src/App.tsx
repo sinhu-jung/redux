@@ -1,3 +1,4 @@
+import Test from "./Test";
 import { ActionTypes, createStore } from "./redux/redux";
 
 function reducer(state: { test: number }, action: ActionTypes) {
@@ -10,21 +11,16 @@ function reducer(state: { test: number }, action: ActionTypes) {
   return state;
 }
 
+function update() {
+  console.log("update function called!: ", store.getState());
+}
+
+export const store = createStore(reducer);
+
+store.subscribe(update);
+
 function App() {
-  function update() {
-    console.log("update function called!: ", store.getState());
-  }
-
-  const store = createStore(reducer);
-  store.subscribe(update);
-
-  console.log(store.getState());
-  store.dispatch({ type: "next" });
-  store.dispatch({ type: "next" });
-  console.log(store.getState());
-  store.dispatch({ type: "next" });
-
-  return <></>;
+  return <Test />;
 }
 
 export default App;
